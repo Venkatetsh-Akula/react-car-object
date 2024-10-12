@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.jsp.car.entity.Car;
+import org.jsp.car.entity.Login;
 import org.jsp.car.interfaceservice.CarInterfaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -43,7 +44,6 @@ public class CarController {
 	}
 	@PostMapping
 	public Car saveCarDetails(@RequestBody Car car) {
-		System.out.println("+++++++++++++++++++++++++++++++++++>"+car);
 		return iservice.saveCarDetailsService(car);
 	}
 	
@@ -54,9 +54,18 @@ public class CarController {
 	
 	@PutMapping(value="/{id}")
 	public Car updateCarDetails(@PathVariable int id,@RequestBody Car car) {
-		System.out.println("------------------------------------>"+car);
-		System.out.println("Hoii");
 		return iservice.updateCarDetailsService(id,car);
 	}
 	
+	
+	
+	//login check
+	@PostMapping(value="/login")
+	public boolean logincheck(@RequestBody Login login){
+		return iservice.checkLoginService(login);
+	}
+	@PostMapping(value="/signup")
+	public boolean createAccount(@RequestBody Login log){
+		return iservice.createLoginAccount(log);
+	}
 }

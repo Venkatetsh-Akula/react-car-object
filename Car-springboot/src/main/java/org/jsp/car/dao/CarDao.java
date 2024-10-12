@@ -5,8 +5,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.jsp.car.entity.Car;
+import org.jsp.car.entity.Login;
 import org.jsp.car.interfacedao.CarDaoInteface;
 import org.jsp.car.repository.CarRepository;
+import org.jsp.car.repository.LoginRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +16,9 @@ import org.springframework.stereotype.Repository;
 public class CarDao implements CarDaoInteface{
 	@Autowired
 	private CarRepository repo;
+	
+	@Autowired
+	private LoginRepository loginrepo;
 
 	@Override
 	public List<Car> findAllCarDao() {
@@ -38,6 +43,16 @@ public class CarDao implements CarDaoInteface{
 	@Override
 	public Optional<List<Car>> findCarDeliveryDate(Date deliveryDate) {
 		return repo.findCarDeliverydate(deliveryDate);
+	}
+
+	@Override
+	public Optional<Login> checkLoginDao(String email, String password) {
+		return loginrepo.findByEmailAndPassword(email,password);
+	}
+
+	@Override
+	public Login createLoginAccount(Login login) {
+		return loginrepo.save(login);
 	}
 	
 

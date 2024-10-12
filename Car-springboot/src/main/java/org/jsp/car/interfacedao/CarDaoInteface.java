@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.jsp.car.entity.Car;
+import org.jsp.car.entity.Login;
 
 public interface CarDaoInteface {
 
@@ -17,5 +18,9 @@ public interface CarDaoInteface {
 	void deleteCarById(int id);
 
 	Optional<List<Car>> findCarDeliveryDate(Date deliveryDate);
+
+	Optional<Login> checkLoginDao(String email, String password);
+
+	Login createLoginAccount(Login login);
 
 }
