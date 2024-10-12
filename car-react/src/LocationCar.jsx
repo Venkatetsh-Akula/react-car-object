@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import './App.css'; // Ensure the CSS file is imported
 
@@ -7,10 +8,12 @@ function LocationCar() {
     const [clocation, setClocation] = useState("");
     const [err, setErr] = useState("");
     const [locDetails, setLocDetails] = useState([]);
+    const[locationlist,setLocationList]=useState([]);
 
     let locationDetails = async (e) => {
         e.preventDefault();
         let list = [];
+        setLocationList([]);
         setLocDetails([]);
         try {
             let urldata = await fetch(url);
@@ -18,15 +21,15 @@ function LocationCar() {
                 let jsondata = await urldata.json();
                 jsondata.map((ele) => {
                     ele.delivery.map((loc) => {
-                        if (loc.location === clocation) {
+                        if (loc.location === clocation && list.indexOf(ele)<0 ) {
                             list.push(ele);
                         }
                     });
                 });
-                if (list.length > 0) {
+                if(list.length > 0) {
                     setLocDetails(list);
-                } else {
-                    setErr("No Data Available On Preferred Location");
+                }else{
+                    setErr("No Car Are Available On Preferred Location");
                     setTimeout(() => {
                         setErr("");
                     }, 5000);
@@ -39,8 +42,41 @@ function LocationCar() {
         }
     };
 
+    let avaliableLocation=async ()=>{
+        let locli=[];
+        let urldata=await fetch(url);
+        if(urldata.ok){
+            let jsondata=await urldata.json();
+            jsondata.map((ele)=>{
+                ele.delivery.map((loc)=>{
+                    if(locli.indexOf(loc.location)<0){
+                        locli.push(loc.location);
+                    }
+                })
+            })
+            setLocationList(locli);
+            console.log(locli);
+        }
+    }
+
+
+    
     return (
         <div className="location-component">
+            <h1>Cars Avaliable Locations</h1>
+            <div class="location-list">
+            <h3>Available Locations:</h3>
+            <ul>
+                {locationlist.map((ele) => {
+                    return (
+                        <li key={ele}>{ele}</li>
+                    );
+                })}
+            </ul>
+            </div>
+            <div>
+                <button type="button" onClick={avaliableLocation}>Click Here</button>
+            </div>
             <h1>Find Cars by Preferred Location</h1>
             <div className="car-loc">
                 <form onSubmit={locationDetails}>

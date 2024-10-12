@@ -14,11 +14,13 @@ function FilterData() {
             let urlData = await fetch(`${url}/${fdate}`);
             if (urlData.ok) {
                 let jsonData = await urlData.json();
+                setCarData([]);
                 if (jsonData.length === 0) {
                     setValidation(`No Deliveries Found On Given Date: ${fdate}`);
                     setTimeout(() => {
                         setValidation("");
                     }, 5000);
+                    console.log(jsonData);   
                 } else {
                     setCarData(jsonData);
                 }

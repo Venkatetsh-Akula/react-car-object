@@ -1,6 +1,8 @@
-import './App.css'; // We'll modify this CSS file to apply luxury styles
+import './App.css'; 
 import FirstPage from './FirstPage';
+import HomePage from './HomePage';
 import SecondPage from './SecondPage';
+import SignUpPage from './SignUpPage';
 import ThirdPage from './ThirdPage';
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
@@ -13,20 +15,13 @@ function App() {
             <li>
               <Link to="/" className="nav-link">Home</Link>
             </li>
-            <li>
-              <Link to="/first-page" className="nav-link">First Page</Link>
-            </li>
-            <li>
-              <Link to="/second-page" className="nav-link">Second Page</Link>
-            </li>
-            <li>
-              <Link to="/third-page" className="nav-link">Third Page</Link>
-            </li>
           </ul>
         </nav>
 
         <div className="content">
           <Routes>
+            <Route path="/" element={<HomePage/>} />
+            <Route path="/signup" element={<SignUpPage/>}/>
             <Route path="/first-page" element={<FirstPage />} />
             <Route path="/second-page" element={<SecondPage />} />
             <Route path="/third-page" element={<ThirdPage />} />
