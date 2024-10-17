@@ -31,6 +31,7 @@ function GetMappingCar() {
                         <div className="car-details" key={ele.id}>
                             <p><strong>Car Id:</strong> {ele.id}</p>
                             <p><strong>Company Name:</strong> {ele.company}</p>
+                            <p><strong>Phone Number:</strong> {ele.phone}</p>
                             <p><strong>Preferred Locations:</strong> 
                                 {ele.delivery.map((loc, index) => {
                                     return (

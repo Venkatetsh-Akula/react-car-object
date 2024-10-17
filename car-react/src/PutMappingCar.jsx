@@ -10,6 +10,7 @@ function PutMappingCar() {
     const [validation, setValidation] = useState("");
     const [deliveryDate, setDeliveryDate] = useState("");
     const [bookingDate, setBookingDate] = useState("");
+    const[phone,setPhone]=useState(0);
     const [preferece1, setPreference1] = useState("");
     const [preferece2, setPreference2] = useState("");
     const [preferece3, setPreference3] = useState("");
@@ -25,6 +26,7 @@ function PutMappingCar() {
             company: company,
             delivery: deliveryArray,
             price: price,
+            phone:phone,
             deliveryDate: deliveryDate,
             bookingDate: bookingDate
         };
@@ -64,6 +66,10 @@ function PutMappingCar() {
                     <input type="text" required onChange={(e) => { setCompany(e.target.value) }} />
                 </label> <br />
                 
+                <label>Enter The Phone Number: <br />
+                    <input type="phone" required onChange={(e) => { setPhone(e.target.value) }} />
+                </label> <br />
+
                 <label>Enter Car Location: <br />
                     <label>Delivery Location 1: <input type="text" onChange={(e) => { setPreference1(e.target.value) }} /></label> <br />
                     <label>Delivery Location 2: <input type="text" onChange={(e) => { setPreference2(e.target.value) }} /></label> <br />

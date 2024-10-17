@@ -54,6 +54,7 @@ function GetCarById() {
                 <div className="car-details">
                     <p><strong>Car Id:</strong> {carData.id}</p>
                     <p><strong>Company Name:</strong> {carData.company}</p>
+                    <p><strong>Phone Number:</strong> {carData.phone}</p>
                     <p>
                         <strong>Preferred Locations:</strong>{" "}
                         {carData.delivery && carData.delivery.length > 0 ? (
@@ -66,7 +67,7 @@ function GetCarById() {
                             <p>No delivery locations available</p>
                         )}
                     </p>
-                    <p><strong>Car Price:</strong> ${carData.price}</p>
+                    <p><strong>Car Price:</strong> {carData.price}</p>
                     <p><strong>Booking Date:</strong> {carData.bookingDate}</p>
                     <p><strong>Delivery Date:</strong> {carData.deliveryDate}</p>
                 </div>

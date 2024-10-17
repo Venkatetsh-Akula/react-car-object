@@ -48,6 +48,7 @@ function FilterData() {
                         <div className="filter-data" key={ele.id}>
                             <p>Car Id: {ele.id}</p>
                             <p>Car Company Name: {ele.company}</p>
+                            <p>Phone Number: {ele.phone}</p>
                             <p>Car Location: 
                                 {ele.delivery.map((loc, index) => {
                                     return (
