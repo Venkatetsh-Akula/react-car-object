@@ -34,6 +34,8 @@ public class Car {
 	private int id;
 	@Column(name = "Company",nullable = false)
 	private String company;
+	@Column(name="Phone_No",nullable=false)
+	private long phone;
 	//@OneToMany(cascade = CascadeType.ALL)
 //	@Column(name="DeliveryLocation",nullable=false)
 //	private String location;
