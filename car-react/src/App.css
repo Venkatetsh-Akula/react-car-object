@@ -1,0 +1,775 @@
+/* App.css */
+
+/* Luxury color palette */
+:root {
+  --primary-bg-color: #f4f4f4; /* White space, background */
+  --primary-color: #1a1a1a; /* Black or dark color for text */
+  --accent-color: #b1976b; /* Gold or an elegant accent color */
+  --nav-bg-color: #1a1a1a; /* Dark background for navbar */
+  --nav-text-color: #f4f4f4; /* Light text color for nav links */
+  --hover-color: #b1976b; /* Gold for hover effect */
+}
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif; /* A more elegant, serif font */
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+}
+
+/* Layout for the app */
+.app-container {
+  padding: 20px;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+  background-color: var(--nav-bg-color);
+  padding: 20px;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--nav-text-color);
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--hover-color); /* Gold hover effect */
+}
+
+/* Content Styling */
+.content {
+  padding: 40px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Adding white space for elegance */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+
+/* Luxury color palette */
+:root {
+  --primary-bg-color: #1a1a1a; /* Dark background for car details */
+  --primary-text-color: #f4f4f4; /* Light text color */
+  --accent-color: #b1976b; /* Gold accent color */
+  --button-bg-color: #1a1a1a; /* Button dark background */
+  --button-hover-color: #b1976b; /* Button hover effect */
+}
+
+.getmapping-container {
+  padding: 40px;
+  background-color: var(--primary-bg-color); /* Dark background */
+  color: var(--primary-text-color); /* Light text for elegance */
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: var(--accent-color); /* Gold title */
+}
+
+.car-details {
+  background-color: #222; /* Slightly lighter background for cards */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.car-details p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.car-details strong {
+  color: var(--accent-color); /* Gold for labels */
+}
+
+.location {
+  margin-left: 20px;
+  font-style: italic;
+}
+
+.button-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.fetch-button {
+  background-color: var(--button-bg-color);
+  color: var(--accent-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fetch-button:hover {
+  background-color: var(--button-hover-color);
+  color: #1a1a1a; /* Dark text on hover */
+}
+
+.validation {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: red; /* Highlight validation messages */
+}
+
+/* Luxury color palette */
+:root {
+  --primary-bg-color: #1a1a1a; /* Dark background for luxury feel */
+  --primary-text-color: #f4f4f4; /* Light text color */
+  --accent-color: #b1976b; /* Gold accent color */
+  --input-bg-color: #333; /* Dark background for inputs */
+  --button-bg-color: #1a1a1a; /* Dark button background */
+  --button-hover-color: #b1976b; /* Gold button hover effect */
+}
+
+.get-car-by-id-container {
+  padding: 40px;
+  background-color: var(--primary-bg-color); /* Dark background */
+  color: var(--primary-text-color); /* Light text for elegance */
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: var(--accent-color); /* Gold title for luxury branding */
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  background-color: var(--input-bg-color); /* Dark input background */
+  color: var(--primary-text-color); /* Light text inside input */
+  border: none;
+  padding: 10px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.submit-button {
+  background-color: var(--button-bg-color);
+  color: var(--accent-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: var(--button-hover-color);
+  color: #1a1a1a; /* Dark text on hover for contrast */
+}
+
+.validation-message {
+  color: red; /* Red for validation errors */
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.car-details {
+  background-color: #222; /* Slightly lighter background for card */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.car-details p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.car-details strong {
+  color: var(--accent-color); /* Gold for important labels */
+}
+
+.location {
+  margin-left: 20px;
+  font-style: italic;
+}
+
+/* App.css */
+
+/* Luxurious color palette */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #2f4f4f; /* Dark Slate Gray for headers */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  color: #556b2f; /* Dark Olive Green for labels */
+}
+
+button {
+  background-color: #b8860b; /* Dark goldenrod for buttons */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto; /* Centering the button */
+}
+
+button:hover {
+  background-color: #daa520; /* Lighter goldenrod on hover */
+}
+
+/* Form and layout spacing */
+form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #b22222; /* Firebrick red for validation message */
+  text-align: center;
+}
+
+.saveCar {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* App.css */
+
+/* Luxurious color palette for the Delete Mapping Car component */
+.delete-component {
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #2f4f4f; /* Dark Slate Gray for header */
+}
+
+label {
+  color: #556b2f; /* Dark Olive Green for labels */
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #b8860b; /* Dark goldenrod for button */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #daa520; /* Lighter goldenrod on hover */
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+.success {
+  color: #228b22; /* Forest Green for success messages */
+}
+
+.error {
+  color: #b22222; /* Firebrick Red for error messages */
+}
+
+
+/* App.css */
+
+/* Luxurious color palette for the Put Mapping Car component */
+.put-component {
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #2f4f4f; /* Dark Slate Gray for header */
+}
+
+label {
+  color: #556b2f; /* Dark Olive Green for labels */
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #b8860b; /* Dark goldenrod for button */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #daa520; /* Lighter goldenrod on hover */
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+.success {
+  color: #228b22; /* Forest Green for success messages */
+}
+
+.error {
+  color: #b22222; /* Firebrick Red for error messages */
+}
+
+
+
+/* App.css */
+
+/* Luxurious color palette for the Filter Data component */
+.filter-component {
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #2f4f4f; /* Dark Slate Gray for header */
+}
+
+label {
+  color: #556b2f; /* Dark Olive Green for labels */
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type="date"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #b8860b; /* Dark goldenrod for button */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #daa520; /* Lighter goldenrod on hover */
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+.success {
+  color: #228b22; /* Forest Green for success messages */
+}
+
+.error {
+  color: #b22222; /* Firebrick Red for error messages */
+}
+
+.car-data-container {
+  margin-top: 20px;
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.filter-data {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; /* Light background for each car data block */
+}
+
+.filter-data p {
+  margin: 5px 0;
+  color: #333; /* Darker text color for better contrast */
+}
+
+/* App.css */
+
+/* General styles for the LocationCar component */
+.location-component {
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #2f4f4f; /* Dark Slate Gray for header */
+}
+
+.car-loc {
+  margin-bottom: 20px;
+}
+
+label {
+  color: #556b2f; /* Dark Olive Green for labels */
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #b8860b; /* Dark goldenrod for button */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #daa520; /* Lighter goldenrod on hover */
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+.success {
+  color: #228b22; /* Forest Green for success messages */
+}
+
+.error {
+  color: #b22222; /* Firebrick Red for error messages */
+}
+
+.car-data-container {
+  margin-top: 20px;
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.car-data {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; /* Light background for each car data block */
+}
+
+.car-data p {
+  margin: 5px 0;
+  color: #333; /* Darker text color for better contrast */
+}
+
+/* Styling for the login container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Styling for the form */
+.login-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Styling for the form group (label and input) */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for labels */
+.form-label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Styling for input fields */
+.form-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Styling for the submit button */
+.submit-button-home {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+/* Styling for the login message */
+.login-message {
+  margin-top: 20px;
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Styling for the sign-up link */
+.signup-link {
+  display: inline-block;
+  margin-top: -40px;
+  color: #007BFF;
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.signup-link:hover {
+  color: #0056b3;
+}
+/* Styling for the signup container */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Styling for the form */
+.signup-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Styling for the form group (label and input) */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for labels */
+.form-label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Styling for input fields */
+.form-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Styling for the submit button */
+.submit-button-signup {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+/* Styling for the message */
+.signup-message {
+  margin-top: 20px;
+  color: #ca0d09;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Styling for the login link */
+.login-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #007BFF;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.login-link:hover {
+  color: #0056b3;
+}
+
+
+.location-list {
+  margin-top: 30px;
+}
+.location-list ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.location-list li {
+  background-color: #e9ecef; /* Light gray for list items */
+  margin: 5px 10px;
+  padding: 10px;
+  border-radius: 5px;
+  
+}
